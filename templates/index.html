@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block pagetitle %}AI Engine{% endblock pagetitle %}
+{% block body %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title mb-4 text-center">Let's Predict</h1>
+          <p class="text-center">
+            Upload an image of a plant leaf to identify any diseases.
+          </p>
+          <form action="/submit" method="post" enctype="multipart/form-data">
+            <div class="form-group mb-4">
+              <label for="file-upload" class="btn btn-success btn-block w-100"
+                >Upload Image</label
+              >
+              <input
+                type="file"
+                name="image"
+                id="file-upload"
+                class="form-control"
+                required
+                hidden
+              />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block w-100">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

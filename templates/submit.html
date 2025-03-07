@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block pagetitle %}{{ title }}{% endblock pagetitle
+%} {% block body %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title text-center">{{ title }} 🍂</h1>
+          <div class="text-center mb-4">
+            <img
+              src="{{ image_url }}"
+              alt="{{ title }}"
+              class="img-fluid rounded shadow"
+              width="350"
+            />
+          </div>
+          <p><strong>Description:</strong> {{ desc }}</p>
+          <p><strong>Prevention:</strong> {{ prevent }}</p>
+          <p><strong>Confidence:</strong> {{ confidence }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
